@@ -16,8 +16,3 @@
 
 if like，please Star~~~
 			  
-
-
-
-
-# manage-demo
