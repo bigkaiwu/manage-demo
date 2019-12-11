@@ -1,0 +1,33 @@
+<!--pages/mine/mine.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">预约列表</view>
+</cu-custom>
+
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 预约列表
+    </view>
+  </view>
+<!-- 未查询到预约数据时提示 -->
+<view wx:if="{{list.length == 0}}"> 
+  <view class="padding margin">
+    <view  class="bg-grey padding radius">
+      <text>暂未查询到有店长提交了预约信息！</text>
+    </view>
+  </view>
+</view>
+<view wx:else>
+  <view wx:for="{{list}}"  wx:key="index">
+    <!-- {{index+1}}: {{list[index].username}}-{{list[index].address}}-{{list[index].disease}} -->
+      <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+          <view class="cu-item arrow">
+            <navigator class="content" url="/pages/moreinfoadmin/moreinfoadmin?user_id={{index}}" hover-class="none">
+              <text class="cuIcon-profile text-grey"></text>
+              <text class="text-grey" decode="{{true}}">{{list[index].username}}&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;{{list[index].disease}}</text>
+            </navigator>
+          </view>
+      </view>
+  </view>
+</view>
+

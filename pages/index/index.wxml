@@ -1,0 +1,37 @@
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <view class="text-xl">后台管理小程序
+      <text class="text-df">普通用户</text>
+    </view>
+    <view class="margin-top-sm">
+      <text>By:Bigkaiwu</text>
+    </view>
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/add/add" hover-class="none">
+        <text class="cuIcon-edit text-cyan"></text>
+        <text class="text-grey">添加预约</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/mine/mine" hover-class="none">
+        <text class="cuIcon-list text-mauve"></text>
+        <text class="text-grey">我的预约</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/process/process" hover-class="none">
+        <text class="cuIcon-creativefill text-orange"></text>
+        <text class="text-grey">合作流程</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/about" hover-class="none">
+        <text class="cuIcon-appreciatefill text-grey"></text>
+        <text class="text-grey">关于小程序</text>
+      </navigator>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

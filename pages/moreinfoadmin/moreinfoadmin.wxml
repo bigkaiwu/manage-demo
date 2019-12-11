@@ -1,0 +1,179 @@
+<!--pages/mine/mine.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">预约信息</view>
+</cu-custom>
+
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "> 顾客详情</text>
+    </view>
+  </view>
+
+<!-- 店长提交的信息展示 -->
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-profile text-orange"></text>
+      <text class="text-orange">店长提交的信息</text>
+    </view>
+  </view>
+</view>
+
+ <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-friendfamous text-grey"></text>
+        <text class="text-grey">姓名：</text>
+        <text class="text-grey pl2">{{list[user_id].username}}</text>
+      </view>
+    </view>
+   <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-friendfamous text-grey"></text>
+        <text class="text-grey">联系方式：</text>
+        <text class="text-grey pl2">{{list[user_id].phone}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-friendfamous text-grey"></text>
+        <text class="text-grey">植发类型：</text>
+        <text class="text-grey pl2">{{list[user_id].disease}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-friendfamous text-grey"></text>
+        <text class="text-grey">联系地址：</text>
+        <text class="text-grey pl2">{{list[user_id].address}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-friendfamous text-grey"></text>
+        <text class="text-grey">店长用户名：</text>
+        <text class="text-grey pl2">{{list[user_id].whoadd}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 当前医院处理信息 -->
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-profile text-orange"></text>
+      <text class="text-orange">当前医院处理信息</text>
+    </view>
+  </view>
+</view>
+
+ <view wx:if="{{list[user_id].come == false}}"> 
+ <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-news text-grey"></text>
+        <text class="text-grey">是否手术：</text>
+        <text class="text-grey pl2">否</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-news text-grey"></text>
+        <text class="text-grey">未手术原因：</text>
+        <text class="text-grey pl2">{{list[user_id].why}}</text>
+      </view>
+    </view>
+   </view>
+</view>
+<view wx:else>
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-news text-grey"></text>
+        <text class="text-grey">是否手术：</text>
+        <text class="text-grey pl2">是</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-news text-grey"></text>
+        <text class="text-grey">植发技术：</text>
+        <text class="text-grey pl2">{{list[user_id].tec}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-news text-grey"></text>
+        <text class="text-grey">植发费用：</text>
+        <text class="text-grey pl2">{{list[user_id].price}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-selection text-grey"></text>
+        <text class="text-red">顾客已手术,联系店长结束此预约单吧！</text>
+      </view>
+    </view>
+  </view>
+   </view>
+
+  <!-- 医院对该顾客的处理结果 -->
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-news text-orange"></text>
+      <text class="text-orange">请医院处理信息：二选一</text>
+    </view>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-news text-orange"></text>
+      <text class="text-orange">还未手术请填写未手术原因</text>
+    </view>
+  </view>
+</view>
+
+<view class="cu-form-group margin-top">
+		<view class="title">未手术原因</view>
+		<input placeholder="请输入未手术原因"  bindinput='formWhy'></input>
+	</view>
+ <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item">
+        <text class="text-grey" data-text="{{ list[user_id].objectId }}" class="static_cell" bindtap="bindtapFunc">{{ list[user_id].objectId }}-- <text class="text-red">提交前请点击此处</text>连接服务器</text>
+    </view>
+</view>
+  <view class="padding flex flex-direction">
+  <button class="cu-btn bg-grey lg" bindtap="foutijiao">提交</button>
+</view>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-news text-orange"></text>
+      <text class="text-orange">已手术请填写技术和费用</text>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="cu-form-group margin-top">
+		<view class="title">植发技术</view>
+		<input placeholder="请输入植发技术"  bindinput='formTec'></input>
+	</view>
+<view class="cu-form-group margin-top">
+		<view class="title">植发费用</view>
+		<input placeholder="请输入植发费用"  bindinput='formPrice'></input>
+	</view>
+ <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item">
+        <text class="text-grey" data-text="{{ list[user_id].objectId }}" class="static_cell" bindtap="bindtapFunc">{{ list[user_id].objectId }}-- <text class="text-red">提交前请点击此处</text>连接服务器</text>
+    </view>
+</view>
+   <view class="padding flex flex-direction">
+  <button class="cu-btn bg-grey lg" bindtap="shitijiao">提交</button>
+</view>

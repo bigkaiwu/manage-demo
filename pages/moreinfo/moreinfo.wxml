@@ -1,0 +1,112 @@
+<!--pages/mine/mine.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">我的预约</view>
+</cu-custom>
+
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "> 顾客详情</text>
+    </view>
+  </view>
+
+<!-- 店长提交的信息展示 -->
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-profile text-orange"></text>
+      <text class="text-orange">我提交的信息</text>
+    </view>
+  </view>
+</view>
+
+ <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-friendfamous text-grey"></text>
+        <text class="text-grey">姓名：</text>
+        <text class="text-grey pl2">{{list[user_id].username}}</text>
+      </view>
+    </view>
+   <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-friendfamous text-grey"></text>
+        <text class="text-grey">联系方式：</text>
+        <text class="text-grey pl2">{{list[user_id].phone}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-friendfamous text-grey"></text>
+        <text class="text-grey">植发类型：</text>
+        <text class="text-grey pl2">{{list[user_id].disease}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-friendfamous text-grey"></text>
+        <text class="text-grey">联系地址：</text>
+        <text class="text-grey pl2">{{list[user_id].address}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 医院对该顾客的处理信息 -->
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item">
+    <view class="content">
+      <text class="cuIcon-news text-orange"></text>
+      <text class="text-orange">医院处理信息</text>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{list[user_id].come == false}}"> 
+ <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-news text-grey"></text>
+        <text class="text-grey">是否手术：</text>
+        <text class="text-grey pl2">否</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-news text-grey"></text>
+        <text class="text-grey">未手术原因：</text>
+        <text class="text-grey pl2">{{list[user_id].why}}</text>
+      </view>
+    </view>
+   </view>
+</view>
+<view wx:else>
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-news text-grey"></text>
+        <text class="text-grey">是否手术：</text>
+        <text class="text-grey pl2">是</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-news text-grey"></text>
+        <text class="text-grey">植发技术：</text>
+        <text class="text-grey pl2">{{list[user_id].tec}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-news text-grey"></text>
+        <text class="text-grey">植发费用：</text>
+        <text class="text-grey pl2">{{list[user_id].price}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-selection text-grey"></text>
+        <text class="text-red">顾客已手术,快联系院方获取您的收益吧！</text>
+      </view>
+    </view>
+  </view>
+   </view>

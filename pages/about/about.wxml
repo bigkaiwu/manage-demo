@@ -1,0 +1,12 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">关于小程序</view></cu-custom>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于新秀植发后台小程序</view>
+  <view class='text-content'>
+    <view>Hi！欢迎使用新秀植发后台小程序！该项目是我个人开发的一款微信小程序。后端采用Bmob云服务。</view>
+    <view class='margin-top-sm'>这个项目可分为管理员和普通用户两种权限，根据登录时的判定显示不同的入口页面。</view>
+    <view class='margin-top-sm'>普通用户可以添加预约信息和查看自己提交的预约信息！</view>
+    <view class='margin-top-sm'>管理员可以查看所有的预约提交信息并进行后续操作！</view>
+    <view class='margin-top-sm'>两种用户操作同一个数据库，所以数据的改变是实时的，提交后刷新页面就会展示最新的内容。此提交不可逆，因此请谨慎提交信息！</view>
+    <view class='margin-top-sm'>The project was developed by Bigkaiwu！</view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/list/list",
+    "pages/moreinfoadmin/moreinfoadmin",
+    "pages/indexroot/indexroot",
+    "pages/index/index",
+    "pages/about/about",
+    "pages/mine/mine",
+    "pages/process/process",
+    "pages/add/add",
+    "pages/moreinfo/moreinfo",
+    "pages/todaylist/todaylist",
+    "pages/todaymoreinfo/todaymoreinfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "后台管理",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

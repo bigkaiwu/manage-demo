@@ -1,0 +1,31 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">合作流程</view>
+</cu-custom>
+<view class="cu-timeline">
+  <view class="cu-time">流程概要</view>
+  <view class="cu-item cur cuIcon-noticefill">
+    <view class="content bg-green shadow-blur">
+      店长洽谈后开通账号入驻小程序后台
+    </view>
+  </view>
+  <view class="cu-item text-red cuIcon-attentionforbidfill">
+    <view class="content bg-red shadow-blur">
+      店长后台添加意向顾客信息
+    </view>
+  </view>
+  <view class="cu-item text-grey cuIcon-evaluate_fill">
+    <view class="content bg-grey shadow-blur">
+      医院处理预约信息邀约到院，店长可耐心等待，或联系医院获取最新处理进度
+    </view>
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-blue content">
+      根据消费对店长返点
+    </view>
+    <!-- <view class="bg-cyan content">
+      三方沟通，诚信为本，合作共赢
+    </view> -->
+  </view>
+</view>
+
