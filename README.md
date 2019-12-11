@@ -12,6 +12,8 @@
 ## 使用
 直接clone到本地打开即可预览，如果你觉得可以直接使用这个小程序二次开发，直接更改appid和bmob相关的Secret Key，API安全码等相关秘钥即可。这里为了方便下载后预览查看功能，本来也只是个免费的后端云服务表单，不涉及个人业务，所以不做隐藏处理。
 
+测试账号：管理员账户：admin admin 普通用户：test test
+
 感谢ColorUI和Bmob
 
 if like,please Star~~~
