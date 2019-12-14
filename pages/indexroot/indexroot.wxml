@@ -1,6 +1,11 @@
 <scroll-view scroll-y class="scrollPage">
   <view class="UCenter-bg">
+<<<<<<< HEAD
     <view class="text-xl">后台管理小程序
+=======
+    <image src="/images/logo.png" class="png" mode="widthFix"></image>
+    <view class="text-xl">新秀后台小程序
+>>>>>>> 优化管理员界面处理预约信息
       <text class="text-df">管理员页面</text>
     </view>
     <view class="margin-top-sm">
@@ -33,6 +38,15 @@
         <text class="text-grey">关于小程序</text>
       </navigator>
     </view>
+<<<<<<< HEAD
+=======
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/log/log" hover-class="none">
+        <text class="cuIcon-formfill text-green"></text>
+        <text class="text-grey">开发日志</text>
+      </navigator>
+    </view>
+>>>>>>> 优化管理员界面处理预约信息
   </view> 
   <view class="cu-tabbar-height"></view>
 </scroll-view>

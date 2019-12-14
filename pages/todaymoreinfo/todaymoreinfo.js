@@ -13,7 +13,10 @@ Page({
     objectId: "0",
     why: '',
     tec: '',
+<<<<<<< HEAD
     a: '',
+=======
+>>>>>>> 优化管理员界面处理预约信息
     price: '',
     picker: ['是', '否'],
     StatusBar: app.globalData.StatusBar,
@@ -30,6 +33,7 @@ Page({
     this.setData({
       objectId: e.currentTarget.dataset.text
     })
+<<<<<<< HEAD
     console.log(typeof (this.data.objectId))
     var a = this.data.objectId
     const query = Bmob.Query("_User");
@@ -40,6 +44,8 @@ Page({
     }).catch(err => {
       console.log(err)
     })
+=======
+>>>>>>> 优化管理员界面处理预约信息
   },
   formWhy: function (e) {
     this.setData({
@@ -58,6 +64,7 @@ Page({
     console.log(typeof (this.data.price))
   },
   foutijiao(e) {
+<<<<<<< HEAD
     this.setData({
       objectId: e.currentTarget.dataset.text
     })
@@ -80,25 +87,74 @@ Page({
     var a = this.data.objectId
     const query = Bmob.Query("_User");
     query.get(a).then(res => {
+=======
+    const query = Bmob.Query("_User");
+    query.get(this.data.objectId).then(res => {
+      console.log(res)
+      res.set('come', false)
+      res.save()
+    }).catch(err => {
+      console.log(err)
+    })
+    query.get(this.data.objectId).then(res => {
+      console.log(res)
+      res.set('why', this.data.why)
+      res.save()
+      wx.showToast({
+        title: '提交成功，刷新后显示最新消息',
+        icon: 'none'
+      })
+    }).catch(err => {
+      console.log(err)
+      wx.showToast({
+        title: '提交失败',
+        icon: 'none'
+      })
+    })
+  },
+  shitijiao(e) {
+    const query = Bmob.Query("_User");
+    query.get(this.data.objectId).then(res => {
+>>>>>>> 优化管理员界面处理预约信息
       console.log(res)
       res.set('come', true)
       res.save()
     }).catch(err => {
       console.log(err)
     })
+<<<<<<< HEAD
     query.get(a).then(res => {
+=======
+    query.get(this.data.objectId).then(res => {
+>>>>>>> 优化管理员界面处理预约信息
       console.log(res)
       res.set('tec', this.data.tec)
       res.save()
     }).catch(err => {
       console.log(err)
     })
+<<<<<<< HEAD
     query.get(a).then(res => {
       console.log(res)
       res.set('price', this.data.price)
       res.save()
     }).catch(err => {
       console.log(err)
+=======
+    query.get(this.data.objectId).then(res => {
+      console.log(res)
+      res.set('price', this.data.price)
+      res.save()
+      wx.showToast({
+        title: '提交成功，刷新后显示最新消息',
+        icon: 'none'
+      })
+    }).catch(err => {
+      wx.showToast({
+        title: '提交失败',
+        icon: 'none'
+      })
+>>>>>>> 优化管理员界面处理预约信息
     })
   },
   onLoad: function (options) {

@@ -143,7 +143,11 @@
 	</view>
  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item">
+<<<<<<< HEAD
         <text class="text-grey" data-text="{{ list[user_id].objectId }}" class="static_cell" bindtap="bindtapFunc">{{ list[user_id].objectId }}-- <text class="text-red">提交前请点击此处</text> 刷新objectId连接服务器后响应后续操作</text>
+=======
+        <text class="text-grey" data-text="{{ list[user_id].objectId }}" class="static_cell" bindtap="bindtapFunc">{{ list[user_id].objectId }}-- <text class="text-red">提交前请点击此处</text> 连接服务器</text>
+>>>>>>> 优化管理员界面处理预约信息
     </view>
 </view>
   <view class="padding flex flex-direction">
@@ -171,7 +175,11 @@
 	</view>
  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item">
+<<<<<<< HEAD
         <text class="text-grey" data-text="{{ list[user_id].objectId }}" class="static_cell" bindtap="bindtapFunc">{{ list[user_id].objectId }}-- <text class="text-red">提交前请点击此处</text> 提交前请点击此处刷新objectId连接服务器后响应后续操作</text>
+=======
+        <text class="text-grey" data-text="{{ list[user_id].objectId }}" class="static_cell" bindtap="bindtapFunc">{{ list[user_id].objectId }}-- <text class="text-red">提交前请点击此处</text>连接服务器</text>
+>>>>>>> 优化管理员界面处理预约信息
     </view>
 </view>
    <view class="padding flex flex-direction">

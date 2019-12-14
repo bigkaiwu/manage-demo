@@ -22,7 +22,11 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.2",
+<<<<<<< HEAD
 	"appid": "wx4ed5dd118bdbe0d1",
+=======
+	"appid": "wx34d2b781069144aa",
+>>>>>>> 优化管理员界面处理预约信息
 	"projectname": "Newshow-manage",
 	"debugOptions": {
 		"hidedInDevtools": []

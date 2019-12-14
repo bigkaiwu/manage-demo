@@ -61,6 +61,10 @@
 	</view>
   <view class="padding flex flex-direction">
     <button class="cu-btn bg-grey lg" bindtap="addPatient">提交</button>
+<<<<<<< HEAD
     <button class="cu-btn block line-blue margin-tb-sm lg" disabled>病友姓名或手机号码已存在时，会提交失败</button>
+=======
+    <button class="cu-btn block line-blue margin-tb-sm lg" disabled>发友姓名或手机号码已存在时，会提交失败</button>
+>>>>>>> 优化管理员界面处理预约信息
   </view>
 </form>
