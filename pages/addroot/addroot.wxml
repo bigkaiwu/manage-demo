@@ -1,8 +1,8 @@
 <scroll-view scroll-y class="scrollPage">
   <view class="UCenter-bg">
     <image src="/images/logo.png" class="png" mode="widthFix"></image>
-    <view class="text-xl">新秀植发后台小程序版
-      <!-- <text class="text-df">beta开发版本</text> -->
+    <view class="text-xl">新秀后台小程序
+      <text class="text-df">管理员页面</text>
     </view>
     <view class="margin-top-sm">
       <text>By:Bigkaiwu</text>
@@ -20,7 +20,7 @@
 
 <scroll-view scroll-x class="bg-green nav text-center">
   <view class="cu-item">
-    <text class="cuIcon-friendfamous"></text> 用户登录
+    <text class="cuIcon-friendfamous"></text> 注册店长账号
   </view>
 </scroll-view>
 
@@ -33,18 +33,17 @@
 		<input placeholder="请输入密码" bindinput='formPwd'></input>
 	</view>
 <view class="padding flex flex-direction">
-  <button class="cu-btn bg-grey lg" bindtap="login">登录</button>
+  <button class="cu-btn bg-grey lg" bindtap="login">注册</button>
 </view>
 
  <view class="solids-bottom padding-xs flex align-center">
     <view class="flex-sub text-center">
       <view class="solid-bottom text-sm padding">
-        <text class="text-grey">仅为内部使用，暂不开放注册功能</text>
+        <text class="text-grey">1.用户名不能重复，已存在时注册失败 </text>
+        <text class="text-grey"> 2.注册后无法更改密码，请和店长沟通后设置密码</text>
       </view>
     </view>
   </view>
-
-
 
   </view>
   <view class="cu-tabbar-height"></view>

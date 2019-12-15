@@ -2,11 +2,7 @@
 <view class='margin-xl bg-white padding-xl radius shadow-lg'>
   <view class='text-center margin-bottom text-lg  text-grey'>关于新秀植发后台小程序</view>
   <view class='text-content'>
-<<<<<<< HEAD
-    <view>Hi！欢迎使用新秀植发后台小程序！该项目是我个人开发的一款微信小程序。后端采用Bmob云服务。</view>
-=======
     <view>Hi！欢迎使用新秀植发后台小程序！</view>
->>>>>>> 优化管理员界面处理预约信息
     <view class='margin-top-sm'>这个项目可分为管理员和普通用户两种权限，根据登录时的判定显示不同的入口页面。</view>
     <view class='margin-top-sm'>普通用户可以添加预约信息和查看自己提交的预约信息！</view>
     <view class='margin-top-sm'>管理员可以查看所有的预约提交信息并进行后续操作！</view>

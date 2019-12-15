@@ -1,13 +1,8 @@
 <scroll-view scroll-y class="scrollPage">
   <view class="UCenter-bg">
-<<<<<<< HEAD
-    <view class="text-xl">后台管理小程序
-      <text class="text-df">普通用户</text>
-=======
     <image src="/images/logo.png" class="png" mode="widthFix"></image>
     <view class="text-xl">新秀后台小程序
       <text class="text-df">店长页面</text>
->>>>>>> 优化管理员界面处理预约信息
     </view>
     <view class="margin-top-sm">
       <text>By:Bigkaiwu</text>

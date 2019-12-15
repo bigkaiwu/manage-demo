@@ -9,10 +9,6 @@
       <text class="cuIcon-title text-orange "> 顾客详情</text>
     </view>
   </view>
-<<<<<<< HEAD
-
-=======
->>>>>>> 优化管理员界面处理预约信息
 <!-- 店长提交的信息展示 -->
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
   <view class="cu-item">

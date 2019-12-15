@@ -12,37 +12,36 @@ Page({
     this.setData({
       username: e.detail.value
     })
-  }, 
+  },
   formPwd: function (e) {
     this.setData({
       password: e.detail.value
     })
   },
   // 判断登录条件
-  login: function (e){
-    Bmob.User.login(this.data.username, this.data.password).then(res => {
-
+  login: function (e) {
+    let params = {
+      username: this.data.username,
+      password: this.data.password
+    }
+    Bmob.User.register(params).then(res => {
+      console.log(res)
       wx.showToast({
-        title: '登录成功',
-        icon: 'loading',
-        duration: 2000
+        title: '注册成功',
+        icon: 'success',
+        duration: 1000
       })
-      if (this.data.username == "admin") {
-        wx.redirectTo({
-          url: '/pages/indexroot/indexroot'
+      setTimeout(function () {
+        wx.navigateTo({
+          url: '../indexroot/indexroot',
         })
-      }
-      else {
-        wx.redirectTo({
-          url: '/pages/index/index'
-        })
-      }
+      }, 1000)
     }).catch(err => {
       console.log(err)
       wx.showToast({
-        title: '用户名或密码错误',
+        title: '注册失败',
         icon: 'none',
-        duration: 2000
+        duration: 1000
       })
     });
   }

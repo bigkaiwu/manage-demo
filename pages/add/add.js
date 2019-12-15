@@ -10,11 +10,7 @@ Page({
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
     index: null,
-<<<<<<< HEAD
-    picker: ['植发', '丰胸', "手术1", "手术2", "手术3", "手术4", "手术5","手术6"],
-=======
     picker: ['疤痕种植', '比基尼种植', "斑秃", "发际线调整", "胡须种植", "鬓角种植", "美人尖种植","胸毛种植"],
->>>>>>> 优化管理员界面处理预约信息
     multiIndex: [0, 1, 0],
     region: ['江苏省', '南京市', '鼓楼区'],
     imgList: [],

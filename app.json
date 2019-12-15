@@ -1,35 +1,25 @@
 {
   "pages": [
     "pages/login/login",
-<<<<<<< HEAD
-    "pages/list/list",
-    "pages/moreinfoadmin/moreinfoadmin",
-=======
-    "pages/moreinfoadmin/moreinfoadmin",
-    "pages/list/list",
->>>>>>> 优化管理员界面处理预约信息
+    "pages/addroot/addroot",
     "pages/indexroot/indexroot",
+    "pages/moreinfoadmin/moreinfoadmin",
+    "pages/list/list",
     "pages/index/index",
     "pages/about/about",
     "pages/mine/mine",
     "pages/process/process",
-<<<<<<< HEAD
-=======
     "pages/log/log",
->>>>>>> 优化管理员界面处理预约信息
     "pages/add/add",
     "pages/moreinfo/moreinfo",
     "pages/todaylist/todaylist",
     "pages/todaymoreinfo/todaymoreinfo"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-<<<<<<< HEAD
-    "navigationBarTitleText": "后台管理",
-=======
     "navigationBarTitleText": "新秀植发",
->>>>>>> 优化管理员界面处理预约信息
     "navigationStyle": "custom",
     "navigationBarTextStyle": "white"
   },
