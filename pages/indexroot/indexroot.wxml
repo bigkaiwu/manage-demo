@@ -18,14 +18,32 @@
     </view>
     <view class="cu-item arrow">
       <navigator class="content" url="/pages/list/list" hover-class="none">
-        <text class="cuIcon-list text-mauve"></text>
+        <text class="cuIcon-cascades text-pink"></text>
         <text class="text-grey">全部预约信息</text>
       </navigator>
     </view>
     <view class="cu-item arrow">
       <navigator class="content" url="/pages/addroot/addroot" hover-class="none">
-        <text class="cuIcon-list text-mauve"></text>
+        <text class="cuIcon-edit text-brown"></text>
         <text class="text-grey">注册店长账号</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/notssroot/notssroot" hover-class="none">
+        <text class="cuIcon-roundclose text-green"></text>
+        <text class="text-grey">未手术列表</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/yesssroot/yesssroot" hover-class="none">
+        <text class="cuIcon-roundcheck text-cyan"></text>
+        <text class="text-grey">已手术列表</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/yesjsroot/yesjsroot" hover-class="none">
+        <text class="cuIcon-redpacket_fill text-red"></text>
+        <text class="text-grey">已结算列表</text>
       </navigator>
     </view>
     <view class="cu-item arrow">

@@ -35,32 +35,23 @@
 			</view>
 		</picker>
 	</view>
+  
 	<view class="cu-bar bg-white margin-top">
 		<view class="action">
-			图片上传
+			图片上传 <view class="text-red">
+			（限一张）
 		</view>
-		<view class="action">
-			{{imgList.length}}/4
 		</view>
+    <view class="action">
+    <button class="cu-btn bg-green shadow" bindtap="upImg" data-target="Modal">上传</button>
+  </view>
 	</view>
-	<view class="cu-form-group">
-		<view class="grid col-4 grid-square flex-sub">
-			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
-				<image src='{{imgList[index]}}' mode='aspectFill'></image>
-				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
-					<text class="cuIcon-close"></text>
-				</view>
-			</view>
-			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
-				<text class="cuIcon-cameraadd"></text>
-			</view>
-		</view>
-	</view>
+
 	<view class="cu-form-group margin-top">
 		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="备注描述"></textarea>
 	</view>
   <view class="padding flex flex-direction">
     <button class="cu-btn bg-grey lg" bindtap="addPatient">提交</button>
-    <button class="cu-btn block line-blue margin-tb-sm lg" disabled>发友姓名或手机号码已存在时，会提交失败</button>
+    <text class="text-grey text-center margin-top">发友姓名或手机号码已存在时，会提交失败</text>
   </view>
 </form>

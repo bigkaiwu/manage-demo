@@ -1,5 +1,5 @@
 var Bmob = require('../../utils/Bmob-2.2.1.min.js');
-Bmob.initialize("417c83f6e9a9c139", "352609","738f7c87bd03db7c22572bfc5ee826da");
+Bmob.initialize("417c83f6e9a9c139", "352609", "738f7c87bd03db7c22572bfc5ee826da");
 
 const app = getApp();
 Page({
@@ -11,10 +11,10 @@ Page({
     come: false,
     user_id: 0,
     objectId: "0",
-    why:'',
-    tec:'',
-    a:'',
-    price:'',
+    why: '',
+    tec: '',
+    a: '',
+    price: '',
     picker: ['是', '否'],
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
@@ -36,7 +36,7 @@ Page({
     this.setData({
       why: e.detail.value
     })
-  }, 
+  },
   formTec: function (e) {
     this.setData({
       tec: e.detail.value
@@ -46,9 +46,9 @@ Page({
     this.setData({
       price: e.detail.value
     })
-    console.log(typeof(this.data.price))
+    console.log(typeof (this.data.price))
   },
-  foutijiao(e){
+  foutijiao(e) {
     const query = Bmob.Query("_User");
     query.get(this.data.objectId).then(res => {
       console.log(res)
@@ -114,6 +114,7 @@ Page({
     var that = this;
     const query = Bmob.Query("_User");
     query.equalTo("info", "==", "发友");
+    query.equalTo("come", "==", false);
     query.find().then(res => {
       var list = res;
       that.setData({

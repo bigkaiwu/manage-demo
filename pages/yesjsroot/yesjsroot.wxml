@@ -1,7 +1,7 @@
 <!--pages/mine/mine.wxml-->
 <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
 	<view slot="backText">返回</view>
-	<view slot="content">我的预约</view>
+	<view slot="content">预约列表</view>
 </cu-custom>
 
   <view class="cu-bar bg-white solid-bottom margin-top">
@@ -9,13 +9,11 @@
       <text class="cuIcon-title text-orange "></text> 预约列表
     </view>
   </view>
-
-
 <!-- 未查询到预约数据时提示 -->
 <view wx:if="{{list.length == 0}}"> 
   <view class="padding margin">
     <view  class="bg-grey padding radius">
-      <text>暂未查询到您提交的预约数据，快去预约发友吧！</text>
+      <text>暂未查询到提交的预约数据中存在已结算信息！</text>
     </view>
   </view>
 </view>
@@ -24,7 +22,7 @@
     <!-- {{index+1}}: {{list[index].username}}-{{list[index].address}}-{{list[index].disease}} -->
       <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
           <view class="cu-item arrow">
-            <navigator class="content" url="/pages/moreinfo/moreinfo?user_id={{index}}" hover-class="none">
+            <navigator class="content" url="/pages/yesjslistroot/yesjslistroot?user_id={{index}}" hover-class="none">
               <text class="cuIcon-profile text-grey"></text>
               <text class="text-grey" decode="{{true}}">{{list[index].username}}&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;{{list[index].disease}}</text>
             </navigator>

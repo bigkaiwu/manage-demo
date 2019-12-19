@@ -1,5 +1,5 @@
 var Bmob = require('../../utils/Bmob-2.2.1.min.js');
-Bmob.initialize("417c83f6e9a9c139", "352609");
+Bmob.initialize("417c83f6e9a9c139", "352609", "738f7c87bd03db7c22572bfc5ee826da");
 
 const app = getApp();
 Page({
@@ -8,16 +8,31 @@ Page({
    */
   data: {
     list: [],
+    come: false,
     user_id: 0,
+    objectId: "0",
+    picker: ['是', '否'],
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
   },
+  PickerChange(e) {
+    console.log(e);
+    this.setData({
+      index: e.detail.value
+    })
+    console.log(objectId)
+  },
+  bindtapFunc(e) {
+    this.setData({
+      objectId: e.currentTarget.dataset.text
+    })
+    console.log(this.data.objectId)
+  },
   onLoad: function (options) {
-    let current = Bmob.User.current()
-    // console.log(current)
     var that = this;
     const query = Bmob.Query("_User");
-    query.equalTo("whoadd", "==", current.username);
+    query.equalTo("info", "==", "发友");
+    query.equalTo("jiesuan", "==", true);
     query.find().then(res => {
       var list = res;
       that.setData({
@@ -25,9 +40,8 @@ Page({
       })
       console.log(list)
     });
-// 获取从我的预约中点击进来的id
+    // 获取从预约中点击进来的id objectId
     this.setData({
-      // list:options.list,
       user_id: options.user_id
     })
     // console.log(this.data.user_id)

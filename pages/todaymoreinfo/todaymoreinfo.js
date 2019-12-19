@@ -143,5 +143,15 @@ Page({
     setTimeout(function () {
       wx.hideLoading()
     }, 1000)
+  },
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
   }
 })

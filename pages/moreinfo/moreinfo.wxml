@@ -49,7 +49,32 @@
         <text class="text-grey pl2">{{list[user_id].address}}</text>
       </view>
     </view>
-  </view>
+
+   <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-friendfamous text-grey"></text>
+        <text class="text-grey">患者图片：</text>
+      </view>
+      <view class="action">
+        <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="Image">查看图片</button>
+      </view>
+    </view>
+    <view class="cu-modal {{modalName=='Image'?'show':''}}">
+      <view class="cu-dialog">
+        <view class="bg-img" style="background-image: url('{{list[user_id].images}}');height:1000rpx;">
+          <view class="cu-bar justify-end text-white">
+            <view class="action" bindtap="hideModal">
+              <text class="cuIcon-close "></text>
+            </view>
+          </view>
+        </view>
+        <view class="cu-bar bg-white">
+          <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">我知道了</view>
+        </view>
+      </view>
+    </view>
+
+</view>
 
   <!-- 医院对该顾客的处理信息 -->
 <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">

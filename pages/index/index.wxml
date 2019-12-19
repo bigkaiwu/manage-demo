@@ -18,7 +18,25 @@
     <view class="cu-item arrow">
       <navigator class="content" url="/pages/mine/mine" hover-class="none">
         <text class="cuIcon-list text-mauve"></text>
-        <text class="text-grey">我的预约</text>
+        <text class="text-grey">全部预约</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/notss/notss" hover-class="none">
+        <text class="cuIcon-roundclose text-green"></text>
+        <text class="text-grey">未手术列表</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/yesss/yesss" hover-class="none">
+        <text class="cuIcon-roundcheck text-cyan"></text>
+        <text class="text-grey">已手术列表</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/yesjs/yesjs" hover-class="none">
+        <text class="cuIcon-redpacket_fill text-red"></text>
+        <text class="text-grey">已结算列表</text>
       </navigator>
     </view>
     <view class="cu-item arrow">

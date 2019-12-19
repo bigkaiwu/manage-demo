@@ -1,20 +1,31 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/add/add",
+    "pages/mine/mine",
+    "pages/moreinfo/moreinfo",
+    "pages/list/list",
+    "pages/notssroot/notssroot",
+    "pages/notss/notss",
+    "pages/yesss/yesss",
     "pages/addroot/addroot",
     "pages/indexroot/indexroot",
     "pages/moreinfoadmin/moreinfoadmin",
-    "pages/list/list",
     "pages/index/index",
     "pages/about/about",
-    "pages/mine/mine",
     "pages/process/process",
     "pages/log/log",
-    "pages/add/add",
-    "pages/moreinfo/moreinfo",
     "pages/todaylist/todaylist",
-    "pages/todaymoreinfo/todaymoreinfo"
-
+    "pages/todaymoreinfo/todaymoreinfo",
+    "pages/notsslist/notsslist",
+    "pages/yessslist/yessslist",
+    "pages/notsslistroot/notsslistroot",
+    "pages/yesssroot/yesssroot",
+    "pages/yessslistroot/yessslistroot",
+    "pages/yesjs/yesjs",
+    "pages/yesjslist/yesjslist",
+    "pages/yesjsroot/yesjsroot",
+    "pages/yesjslistroot/yesjslistroot"
   ],
   "window": {
     "backgroundTextStyle": "light",

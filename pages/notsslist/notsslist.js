@@ -8,30 +8,46 @@ Page({
    */
   data: {
     list: [],
-    index: 0,
+    user_id: 0,
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
   },
   onLoad: function (options) {
-    // 获取用户登录信息
     let current = Bmob.User.current()
-    console.log(current)
-    // 根据whoadd字段查询列表
+    // console.log(current)
     var that = this;
     const query = Bmob.Query("_User");
     query.equalTo("whoadd", "==", current.username);
+    query.equalTo("come", "==", false);
     query.find().then(res => {
-          var list = res;
-            that.setData({
-              list: list
-            })
-          console.log(list)
+      var list = res;
+      that.setData({
+        list: list
+      })
+      console.log(list)
     });
+    // 获取从我的预约中点击进来的id
+    this.setData({
+      // list:options.list,
+      user_id: options.user_id
+    })
+    // console.log(this.data.user_id)
+
     wx.showLoading({
       title: '正在查询',
     })
     setTimeout(function () {
       wx.hideLoading()
     }, 1000)
+  },
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
   }
 })
